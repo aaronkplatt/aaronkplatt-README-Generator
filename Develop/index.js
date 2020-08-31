@@ -1,4 +1,7 @@
+//node specific
 const fs = require('fs');
+
+//third party
 const inquirer = require('inquirer');
 
 // array of questions for user
@@ -48,7 +51,7 @@ inquirer
       {
         type: "input",
         name: "email",
-        message: "Email:"
+        message: "Email: "
       }
     ])
     .then(function(answers) {
@@ -71,6 +74,15 @@ inquirer
 
 ## Project Despription
 ${description}
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Guidelines](#guidelines)
+* [test](#test)
+* [license](#license)
+* [Github](#github)
+* [Email](#email)
 
 ## Installation
 ${installation}
@@ -105,13 +117,13 @@ ${email}`
     });
     
 // function to write README file
-function writeToFile(fileName, data) {
-}
+// function writeToFile(fileName, data) {
+// }
 
 // function to initialize program
-function init() {
+// function init() {
 
-}
+// }
 
 // function call to initialize program
-init();
+// init();
