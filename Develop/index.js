@@ -65,20 +65,17 @@ inquirer
         const github = answers.github;
         const email = answers.email;
 
-        // if (license === "Apache License 2.0") {
-        //   var badgeVariable = 'https://img.shields.io/badge/Apache%20License%202.0-license-black';
-        // } 
+        //BADGES
         var listBadge;
-
-    if (license === 'Apache License 2.0') {
-        listBadge = 'https://img.shields.io/badge/Apache%20License%202.0-license-black'
-    } else if (license === 'GNU General Public License v3.0'){
-        listBadge = 'https://img.shields.io/badge/GNU%20General%20Public%20License%20v3.0-license-black'
-    } else if (license === 'BSD 3-Clause "New" or "Revised" License') {
-        listBadge = 'https://img.shields.io/license/BSD%203--Clause%60-badge-black'
-    } else if (license === 'MIT License') {
-        listBadge = 'https://img.shields.io/license/MIT-badge-black'
-    };
+        if (license === 'Apache License 2.0') {
+          listBadge = 'https://img.shields.io/badge/Apache%20License%202.0-license-black'
+        } else if (license === 'GNU General Public License v3.0'){
+          listBadge = 'https://img.shields.io/badge/GNU%20General%20Public%20License%20v3.0-license-black'
+        } else if (license === 'BSD 3-Clause "New" or "Revised" License') {
+          listBadge = 'https://img.shields.io/license/BSD%203--Clause%60-badge-black'
+        } else if (license === 'MIT License') {
+          listBadge = 'https://img.shields.io/license/MIT-badge-black'
+        };
 
         //Hard coded README
         const readmeOutput = 
