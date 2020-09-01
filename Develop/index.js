@@ -115,24 +115,12 @@ https://github.com/${github}
 ## Questions
 If you have any questions please send an email to ${email}`
         
-        //funtion to write readme file
-        fs.writeFile('./README.md', readmeOutput, function (error) {
+        //funtion to write readme file and check for ERRORS
+        fs.writeFile('./README-generated.md', readmeOutput, function (error) {
             if(error) {
                 console.log('There was an error: ', error);
             } else {
                 console.log("All done!");
             }
         })
-
     });
-// function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// function to initialize program
-// function init() {
-
-// }
-
-// function call to initialize program
-// init();
