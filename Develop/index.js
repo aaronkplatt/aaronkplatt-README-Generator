@@ -4,8 +4,6 @@ const fs = require('fs');
 //third party
 const inquirer = require('inquirer');
 
-// array of questions for user
-// const questions = [
 inquirer
     .prompt([
     {
@@ -39,9 +37,10 @@ inquirer
         message: "Test Instructions: "
       },
       {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "License: "
+        message: "License: ",
+        choices: ["Apache License 2.0", "GNU General Public License v3.0", "MIT License", 'BSD 3-Clause "New" or "Revised" License']
       },
       {
         type: "input",
@@ -66,7 +65,20 @@ inquirer
         const github = answers.github;
         const email = answers.email;
 
-        // console.log(answers);
+        // if (license === "Apache License 2.0") {
+        //   var badgeVariable = 'https://img.shields.io/badge/Apache%20License%202.0-license-black';
+        // } 
+        var listBadge;
+
+    if (license === 'Apache License 2.0') {
+        listBadge = 'https://img.shields.io/badge/Apache%20License%202.0-license-black'
+    } else if (license === 'GNU General Public License v3.0'){
+        listBadge = 'https://img.shields.io/badge/GNU%20General%20Public%20License%20v3.0-license-black'
+    } else if (license === 'BSD 3-Clause "New" or "Revised" License') {
+        listBadge = 'https://img.shields.io/license/BSD%203--Clause%60-badge-black'
+    } else if (license === 'MIT License') {
+        listBadge = 'https://img.shields.io/license/MIT-badge-black'
+    };
 
         //Hard coded README
         const readmeOutput = 
@@ -82,7 +94,7 @@ ${description}
 * [test](#test)
 * [license](#license)
 * [Github](#github)
-* [Email](#email)
+* [Questions](#questions)
 
 ## Installation
 ${installation}
@@ -98,12 +110,13 @@ ${test}
 
 ## license
 ${license}
+![GitHub badge](${listBadge})
 
 ## Github
-${github}
+https://github.com/${github}
 
-## Email
-${email}`
+## Questions
+If you have any questions please send an email to ${email}`
         
         //funtion to write readme file
         fs.writeFile('./README.md', readmeOutput, function (error) {
@@ -115,7 +128,6 @@ ${email}`
         })
 
     });
-    
 // function to write README file
 // function writeToFile(fileName, data) {
 // }
