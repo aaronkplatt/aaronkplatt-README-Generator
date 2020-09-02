@@ -29,8 +29,6 @@ LIVE CODED: https://drive.google.com/file/d/1HRNZdoIJqfDzj0I7YvFeVQsguBQUtmi3/vi
 
 ## license
 UCSD BOOTCAMPSPOT
-MIT License
-![GitHub badge](https://img.shields.io/license/MIT-badge-black)
 
 ## Github
 https://github.com/aaronkplatt/aaronkplatt-README-Generator
